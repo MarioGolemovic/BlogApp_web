@@ -9,6 +9,14 @@ export const useUserStore = defineStore('user', {
       user
     }
   },
+  getters: {
+    userEmail() {
+      return this.user ? this.user.email : null;
+    },
+    UserId() {
+      return this.user ? this.user.id : null;
+    },
+  },
   actions: {
     signin(user) {
       this.user = user

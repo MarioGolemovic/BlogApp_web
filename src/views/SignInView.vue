@@ -37,9 +37,10 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import handleSignInUser from '../composables/signin/handleSignInUser.js'
 
-const router = useRouter()
+
 const email = ref('')
 const password = ref('')
+const router = useRouter()
 const signinuser = handleSignInUser(router, email, password)
 </script>
 

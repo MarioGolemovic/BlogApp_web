@@ -27,7 +27,7 @@ const router = createRouter({
     },
     {
       path: '/update/:id',
-      name: 'Upadate',
+      name: 'Update',
       component: Update
     },
     {

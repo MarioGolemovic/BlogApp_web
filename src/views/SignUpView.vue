@@ -32,9 +32,6 @@
           />
         </div>
         <div class="form-group">
-          <input class="form-control mb-3" type="text" v-model="role" placeholder="Role" required />
-        </div>
-        <div class="form-group">
           <button class="btn btn-secondary btn-block" type="submit">Sign Up</button>
         </div>
       </form>
@@ -50,9 +47,8 @@ import handleSignUpUser from '../composables/signup/handleSignUpUser.js'
 const username = ref('')
 const email = ref('')
 const password = ref('')
-const role = ref('')
 const router = useRouter()
-const signupuser = handleSignUpUser(router, username, email, password, role)
+const signupuser = handleSignUpUser(router, username, email, password)
 </script>
 
 <style scoped>

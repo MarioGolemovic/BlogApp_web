@@ -2,40 +2,64 @@
   <div class="background">
     <header>
       <img src="./assets/bbb.png" alt="BBB" width="130" />
-      <router-link :to="{ name: 'Home' }"><h1>Bad Blue Boys</h1> </router-link>
+      <router-link :to="{ name: 'Home' }"><h1>Bad Blue Boys</h1></router-link>
 
       <nav>
         <router-link :to="{ name: 'Home' }">Home</router-link>
         <router-link v-show="!user" :to="{ name: 'SignIn' }">Sign In</router-link>
         <router-link v-show="!user" :to="{ name: 'SignUp' }">Sign Up</router-link>
-        <router-link v-show="user" :to="{ name: 'Create' }">Create</router-link>
-        <router-link @click="signout" v-show="user" :to="{ name: 'SignIn' }"
-          ><nav class="signout">logout</nav></router-link
-        >
+        <router-link v-show="canCreate" :to="{ name: 'Create' }">Create</router-link>
+        <a @click="confirmLogout" v-show="user" class="logout">Logout</a>
       </nav>
     </header>
   </div>
 </template>
 
 <script>
-import { useUserStore } from '@/stores/user.js'
-import { computed } from 'vue'
+import { useUserStore } from '@/stores/user.js';
+import { computed } from 'vue';
+import { useRouter } from 'vue-router';
+
 export default {
   setup() {
-    const userStore = useUserStore()
-    let user = computed(() => {
-      return userStore.user
-    })
-    const signin = () => {
-      userStore.signin()
-    }
-    const signout = () => {
-      userStore.signout()
-    }
+    const router = useRouter();
+    const userStore = useUserStore();
+    const user = computed(() => userStore.user);
+    const userEmail = computed(() => userStore.userEmail);
+    
+    // Variable to store the current route before initiating logout
+    let currentRouteBeforeLogout = null;
 
-    return { user, signin, signout }
-  }
-}
+    const canCreate = computed(() => user.value && userEmail.value === 'mariogolemovic12@gmail.com');
+
+    const signin = async () => {
+      await userStore.signin();
+    };
+
+    const signout = () => {
+      userStore.signout();
+    };
+
+    const confirmLogout = async () => {
+      // Store the current route before initiating logout
+      currentRouteBeforeLogout = { ...router.currentRoute.value };
+
+      const confirmLogout = window.confirm("Are you sure you want to logout?");
+      if (confirmLogout) {
+        await signout();
+        // If user confirms, navigate to the "SignIn" page
+        router.replace({ name: 'SignIn' });
+      } else {
+        // If user clicks "Cancel", navigate back to the stored route
+        if (currentRouteBeforeLogout) {
+          router.replace(currentRouteBeforeLogout);
+        }
+      }
+    };
+
+    return { user, canCreate, signin, confirmLogout };
+  },
+};
 </script>
 
 <style>

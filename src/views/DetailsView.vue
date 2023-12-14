@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <h2>Komentari</h2>
+            <h2>Comments:</h2>
             <ul class="list-group">
               <li v-for="comment in comments" :key="comment.id" class="list-group-item">
                 <p class="mb-0"><strong>{{ comment.username }}:</strong> {{ comment.comment }}</p>
@@ -111,12 +111,9 @@ export default {
   margin: 0 auto;
 }
 
-.text-center {
-  color: rgb(18, 18, 74);
-}
 
 .card-header {
-  background-color: rgb(13, 43, 96);
+  background-color: rgb(40, 43, 49);
 }
 
 h1 {

@@ -1,19 +1,49 @@
 <template>
-  <div class="background">
-    <header>
-      <img src="./assets/bbb.png" alt="BBB" width="130" />
-      <router-link :to="{ name: 'Home' }"><h1>Bad Blue Boys</h1></router-link>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <router-link class="navbar-brand" :to="{ name: 'Home' }">
+            <img src="./assets/bbb.png" alt="Brand Logo" class="brand-logo">
+          </router-link>
+          
+        </div>
+        <div class="title-container">
+          <h1 class="text-white title">Bad Blue Boys</h1>
+        </div>
+        <!-- Koristite b-nav-toggle umesto button-a i dodajte BootstrapVue klasu -->
+        <b-nav-toggle target="navbarNav"></b-nav-toggle>
 
-      <nav>
-        <router-link :to="{ name: 'Home' }">Home</router-link>
-        <router-link v-show="!user" :to="{ name: 'SignIn' }">Sign In</router-link>
-        <router-link v-show="!user" :to="{ name: 'SignUp' }">Sign Up</router-link>
-        <router-link v-show="canCreate" :to="{ name: 'Create' }">Create</router-link>
-        <a @click="confirmLogout" v-show="user" class="logout">Logout</a>
-      </nav>
-    </header>
+        <b-collapse id="navbarNav" is-nav>
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'Home' }">Home</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'AboutClub' }">About Club</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'Contact' }">Contact</router-link>
+            </li>
+            <li class="nav-item" v-show="!user">
+              <router-link class="nav-link" :to="{ name: 'SignIn' }">Sign In</router-link>
+            </li>
+            <li class="nav-item" v-show="!user">
+              <router-link class="nav-link" :to="{ name: 'SignUp' }">Sign Up</router-link>
+            </li>
+            <li class="nav-item" v-show="canCreate">
+              <router-link class="nav-link" :to="{ name: 'Create' }">Create</router-link>
+            </li>
+            <li class="nav-item" v-show="user">
+              <a class="nav-link" @click="confirmLogout">Logout</a>
+            </li>
+          </ul>
+        </b-collapse>
+      </div>
+    </nav>
   </div>
 </template>
+
 
 <script>
 import { useUserStore } from '@/stores/user.js';
@@ -26,8 +56,7 @@ export default {
     const userStore = useUserStore();
     const user = computed(() => userStore.user);
     const userEmail = computed(() => userStore.userEmail);
-    
-    // Variable to store the current route before initiating logout
+
     let currentRouteBeforeLogout = null;
 
     const canCreate = computed(() => user.value && userEmail.value === 'mariogolemovic12@gmail.com');
@@ -41,16 +70,13 @@ export default {
     };
 
     const confirmLogout = async () => {
-      // Store the current route before initiating logout
       currentRouteBeforeLogout = { ...router.currentRoute.value };
 
       const confirmLogout = window.confirm("Are you sure you want to logout?");
       if (confirmLogout) {
         await signout();
-        // If user confirms, navigate to the "SignIn" page
         router.replace({ name: 'SignIn' });
       } else {
-        // If user clicks "Cancel", navigate back to the stored route
         if (currentRouteBeforeLogout) {
           router.replace(currentRouteBeforeLogout);
         }
@@ -61,48 +87,20 @@ export default {
   },
 };
 </script>
+<style scoped>
+.brand-logo {
+  max-width: 100%; /* Prilagodi veličinu loga prema potrebi */
+  margin-right: 10px;
+  max-width: 90px; /* Dodaj malo razmaka između loga i teksta */
+}
+.title-container {
+  flex-grow: 1; /* Da bi naslov zauzeo preostali prostor na desnoj strani */
+  text-align: center; /* Poravnanje naslova na desno */
+}
 
-<style>
-.background {
-  background: lightgrey;
-  width: 100%;
-  top: 0px;
-  z-index: 2;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
-    Verdana, sans-serif;
-}
-header h1 {
-  color: rgb(67, 67, 67);
-  font-size: 48px;
-}
-header h1:hover {
-  -webkit-transition: color 0.33s;
-  transition: color 0.33s;
-  color: #3313c1;
-}
-header a {
-  color: #bbb;
-  text-decoration: none;
-  margin-left: 20px;
-}
-header a.router-link-active {
-  color: rgb(67, 67, 67);
-  font-weight: bold;
-}
-header nav {
-  display: inline;
-  margin-left: 0%;
-}
-.logout {
-  color: #bbb;
-  text-decoration: none;
+.title {
+  color: #fff;
+  font-size: 60px; /* Prilagodite veličinu fonta prema vašim željama */
+  margin-bottom: 0;
 }
 </style>

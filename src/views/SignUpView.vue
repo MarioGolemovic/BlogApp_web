@@ -84,5 +84,6 @@ const signupuser = handleSignUpUser(router, username, email, password)
   font-size: 50px;
   line-height: 1;
   margin-bottom: 30px;
+  color: black;
 }
 </style>

@@ -39,14 +39,17 @@ export default {
 }
 </script>
 
-<style scoped>
-.text-center {
-  color: rgb(18, 18, 74);
+<style >
+
+body {
+  background-color: #c5d8eb;
 }
 
+
 .card-header {
-  background-color: rgb(13, 43, 96);
+  background-color: rgb(36, 41, 49);
 }
+
 .text-center {
   color: azure;
   font-family: 'Times New Roman', Times, serif;

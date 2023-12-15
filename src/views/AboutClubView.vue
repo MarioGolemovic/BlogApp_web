@@ -133,6 +133,8 @@ As Dinamo Zagreb's fortress, Maksimir Stadium is not just a physical structure b
     </div>
   </div>
 </template>
+<script>
+</script>
 
 <style scoped>
 strong {

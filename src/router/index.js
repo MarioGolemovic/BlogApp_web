@@ -7,6 +7,10 @@ import Create from '../views/CreateView.vue'
 import Update from '../views/UpdateView.vue'
 import Contact from '../views/ContactView.vue'
 import AboutClub from '../views/AboutClubView.vue'
+import CreatePlayer from '../views/CreatePlayerView.vue'
+import UpdatePlayer from '../views/UpdatePlayerView.vue'
+import DetailsPlayer from '../views/DetailsPlayerView.vue'
+import Players from '../views/PlayersView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +21,30 @@ const router = createRouter({
       component: Home
     },
     {
+      path: '/players',
+      name: 'Players',
+      component: Players
+    },
+    {
+      path: '/players/:id',
+      name: 'DetailsPlayer',
+      component: DetailsPlayer,
+      props: true
+    },
+    {
+      path: '/createplayer',
+      name: 'CreatePlayer',
+      component: CreatePlayer
+    },
+    {
       path: '/contact',
       name: 'Contact',
       component: Contact,
+    },
+    {
+      path: '/updateplayer/:id',
+      name: 'UpdatePlayer',
+      component: UpdatePlayer
     },
     {
       path: '/aboutclub',

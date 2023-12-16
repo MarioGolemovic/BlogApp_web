@@ -32,7 +32,13 @@
               <router-link class="nav-link" :to="{ name: 'SignUp' }">Sign Up</router-link>
             </li>
             <li class="nav-item" v-show="canCreate">
-              <router-link class="nav-link" :to="{ name: 'Create' }">Create</router-link>
+              <router-link class="nav-link" :to="{ name: 'Create' }">Create Note</router-link>
+            </li>
+            <li class="nav-item" v-show="canCreatePlayer">
+              <router-link class="nav-link" :to="{ name: 'CreatePlayer' }">Create Player</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'Players' }">Players</router-link>
             </li>
             <li class="nav-item" v-show="user">
               <a class="nav-link" @click="confirmLogout">Logout</a>
@@ -60,7 +66,7 @@ export default {
     let currentRouteBeforeLogout = null;
 
     const canCreate = computed(() => user.value && userEmail.value === 'mariogolemovic12@gmail.com');
-
+    const canCreatePlayer = computed(() => user.value && userEmail.value === 'mariogolemovic12@gmail.com');
     const signin = async () => {
       await userStore.signin();
     };
@@ -83,7 +89,7 @@ export default {
       }
     };
 
-    return { user, canCreate, signin, confirmLogout };
+    return { user, canCreate,canCreatePlayer, signin, confirmLogout };
   },
 };
 </script>

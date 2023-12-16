@@ -102,6 +102,14 @@ export default {
 }
 </script>
 <style scoped>
+
+h2 {
+  color: aliceblue;
+}
+
+label {
+  color: antiquewhite;
+}
 .btn {
   display: block !important;
 }

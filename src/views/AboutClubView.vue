@@ -142,25 +142,26 @@ strong {
 }
   /* Stilizacija po potrebi, koristi Bootstrap klase */
   .history-jumbotron {
-    background-color: #97badd; /* Prilagodite boju po želji */
+    background-color: #9daab8; /* Prilagodite boju po želji */
     padding: 20px;
     margin-top: 20px;
+    
   }
 
   .trophies-jumbotron {
-    background-color: #97badd; /* Prilagodite boju po želji */
+    background-color: #9daab8; /* Prilagodite boju po želji */
     padding: 20px;
     margin-top: 20px;
   }
 
   .bbb-jumbotron {
-    background-color: #97badd; /* Prilagodite boju po želji */
+    background-color: #9daab8; /* Prilagodite boju po želji */
     padding: 20px;
     margin-top: 20px;
   }
 
   .maksimir-jumbotron {
-    background-color: #97badd; /* Prilagodite boju po želji */
+    background-color: #9daab8; /* Prilagodite boju po želji */
     padding: 20px;
     margin-top: 20px;
   }

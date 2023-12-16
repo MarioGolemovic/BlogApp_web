@@ -42,7 +42,7 @@ export default {
 <style >
 
 body {
-  background-color: #c5d8eb;
+  background-color: #9ab7db;
 }
 
 

@@ -12,8 +12,8 @@
             </div>
             <div class="card-footer">
               <div class="btn-group" role="group" v-if="canEdit()">
-                <button  class="btn btn-danger" @click="confirmDeleteNote">DELETE</button>
-                <router-link  class="btn btn-secondary" :to="'/update/:id' + note.id"
+                <button class="btn btn-danger" @click="confirmDeleteNote">DELETE</button>
+                <router-link class="btn btn-secondary" :to="'/update/:id' + note.id"
                   >UPDATE</router-link
                 >
               </div>
@@ -23,8 +23,19 @@
             <h2>Comments:</h2>
             <ul class="list-group">
               <li v-for="comment in comments" :key="comment.id" class="list-group-item">
-                <p class="mb-0"><strong>{{ comment.username }}:</strong> {{ comment.comment }}</p>
-                <button v-if="comment.userId._id === userStore.UserId || userStore.userEmail === 'mariogolemovic12@gmail.com'" class="btn btn-danger" @click="confirmDeleteComment(comment.id)">DELETE</button>
+                <p class="mb-0">
+                  <strong>{{ comment.username }}:</strong> {{ comment.comment }}
+                </p>
+                <button
+                  v-if="
+                    comment.userId._id === userStore.UserId ||
+                    userStore.userEmail === 'mariogolemovic12@gmail.com'
+                  "
+                  class="btn btn-danger"
+                  @click="confirmDeleteComment(comment.id)"
+                >
+                  DELETE
+                </button>
               </li>
             </ul>
           </div>
@@ -48,16 +59,15 @@ import handleAddComment from '../composables/comments/handleAddComment.js'
 import handleGetCommentsByNote from '../composables/comments/handleGetCommentsByNote.js'
 import handleDeleteComment from '../composables/comments/handleDeleteComment.js'
 import { useRouter } from 'vue-router'
-import { ref} from 'vue'
+import { ref } from 'vue'
 import { useUserStore } from '@/stores/user'
-
 
 export default {
   props: ['id'],
   setup(props) {
-    const userStore = useUserStore();
-    const userEmail = userStore.userEmail;
-    
+    const userStore = useUserStore()
+    const userEmail = userStore.userEmail
+
     const { note, load } = handleGetNote(props.id)
     load()
     const { deleteNote } = handleDeleteNote(props.id, useRouter())
@@ -65,20 +75,18 @@ export default {
     load_comments()
     const commentText = ref('')
     const addComment = handleAddComment()
-    const {deleteComment} = handleDeleteComment()
-    
+    const { deleteComment } = handleDeleteComment()
+
     const confirmDeleteNote = () => {
-      if (window.confirm("Jeste li sigurni da želite izbrisati ovu bilješku?")) {
-        deleteNote(); 
+      if (window.confirm('Jeste li sigurni da želite izbrisati ovu bilješku?')) {
+        deleteNote()
       }
-    };
+    }
 
     const canEdit = () => {
-      return userEmail === 'mariogolemovic12@gmail.com';
-    };
-    
-    
-    
+      return userEmail === 'mariogolemovic12@gmail.com'
+    }
+
     const submitComment = async () => {
       await addComment(props.userId, props.id, commentText.value)
       load_comments()
@@ -86,23 +94,33 @@ export default {
     }
 
     const onDeleteComment = async (commentId) => {
-      await deleteComment(commentId);
-      load_comments();
+      await deleteComment(commentId)
+      load_comments()
     }
 
     const confirmDeleteComment = (commentId) => {
-      if (window.confirm("Jeste li sigurni da želite izbrisati ovaj komentar?")) {
-        onDeleteComment(commentId);
+      if (window.confirm('Jeste li sigurni da želite izbrisati ovaj komentar?')) {
+        onDeleteComment(commentId)
       }
-    };
+    }
 
- 
-    return { note, deleteNote, comments, commentText, submitComment,deleteComment, canEdit, userStore,onDeleteComment,confirmDeleteNote,confirmDeleteComment}
+    return {
+      note,
+      deleteNote,
+      comments,
+      commentText,
+      submitComment,
+      deleteComment,
+      canEdit,
+      userStore,
+      onDeleteComment,
+      confirmDeleteNote,
+      confirmDeleteComment
+    }
   }
 }
 </script>
 <style scoped>
-
 h2 {
   color: aliceblue;
 }
@@ -118,7 +136,6 @@ label {
   max-width: 65%;
   margin: 0 auto;
 }
-
 
 .card-header {
   background-color: rgb(40, 43, 49);

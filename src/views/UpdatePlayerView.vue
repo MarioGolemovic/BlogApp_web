@@ -3,13 +3,23 @@
       <div class="form-container border border-dark">
         <div class="image-holder"></div>
         <form method="post" @submit.prevent="updateplayer">
-          <h1 class="text-center"><strong>Update </strong>a player!</h1>
+          <h1 class="text-center" style="margin-bottom: 10px;"><strong>Update </strong>a player!</h1>
           <div class="form-group">
             <input
               class="form-control mb-2"
               type="text"
               v-model="name"
               placeholder="Name"
+              required
+              autofocus
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control mb-2"
+              type="text"
+              v-model="nationality"
+              placeholder="Nationality"
               required
               autofocus
             />
@@ -109,6 +119,7 @@
 
   
   const name = ref('')
+  const nationality = ref('')
   const position = ref('')
   const injury = ref('')
   const age = ref('')
@@ -119,12 +130,12 @@
   const assists = ref('')
   const router = useRouter()
   const playerID = router.currentRoute.value.params.id.substring(3)
-  const updateplayer = handleUpdatePlayer(router, name,position,injury, age,number,yellow,red,goals,assists, playerID)
+  const updateplayer = handleUpdatePlayer(router, name,nationality,position,injury, age,number,yellow,red,goals,assists, playerID)
   </script>
   
   <style scoped>
   .register-photo {
-    padding: 30px ;
+    padding: 15px ;
   }
   
   .register-photo .image-holder {

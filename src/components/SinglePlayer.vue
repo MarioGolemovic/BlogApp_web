@@ -21,8 +21,6 @@
       const snippet = computed(() => {
         const positionSnippet = player.value.position
        
-
-        // Ovdje možete kombinirati sve snippete kako želite
         return `${positionSnippet}`
       })
 

@@ -4,7 +4,7 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-header">
-              <h3 class="text-center">SQUAD</h3>
+              <h3 class="text-center">DINAMO ZAGREB SQUAD!</h3>
             </div>
             <div class="card-body">
               <div v-if="players.length">

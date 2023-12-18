@@ -39,12 +39,10 @@ export default {
 }
 </script>
 
-<style >
-
+<style>
 body {
   background-color: #9ab7db;
 }
-
 
 .card-header {
   background-color: rgb(36, 41, 49);

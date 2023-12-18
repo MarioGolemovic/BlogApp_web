@@ -3,13 +3,23 @@
       <div class="form-container border border-dark mt-0">
         <div class="image-holder"></div>
         <form method="post" @submit.prevent="addplayer">
-          <h1 class="text-center"><strong>Create </strong>a player!</h1>
+          <h1 class="text-center" style="margin-bottom: 10px;"><strong>Create </strong>a player!</h1>
           <div class="form-group">
             <input
               class="form-control mb-2"
               type="text"
               v-model="name"
               placeholder="Name"
+              required
+              autofocus
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control mb-2"
+              type="text"
+              v-model="nationality"
+              placeholder="Nationality"
               required
               autofocus
             />
@@ -109,6 +119,7 @@
   import { useUserStore } from '@/stores/user.js'
   
   const name = ref('')
+  const nationality = ref('')
   const position = ref('')
   const injury = ref('')
   const age = ref('')
@@ -120,12 +131,12 @@
   const userStore = useUserStore()
   let user = userStore.user.userId
   const router = useRouter()
-  const addplayer = handleAddPlayer(router, name,position,injury, age,number,yellow,red,goals,assists, user)
+  const addplayer = handleAddPlayer(router, name,nationality,position,injury, age,number,yellow,red,goals,assists, user)
   </script>
   
   <style scoped>
   .register-photo {
-    padding: 30px;
+    padding: 15px;
   }
   
   .register-photo .image-holder {

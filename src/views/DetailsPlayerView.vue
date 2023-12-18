@@ -2,12 +2,13 @@
     <div class="d-flex align-items-center min-vh-50 mt-3">
       <div class="container mt-5 max-width">
         <div class="row">
-          <div class="col-md-8 mx-auto"> <!-- Postavljanje ograničenja na 8 kolona, središnje pozicioniranje -->
+          <div class="col-md-8 mx-auto"> 
             <div v-if="player" class="card mb-3">
               <div class="card-header">
                 <h1>{{ player.name }}</h1>
               </div>
               <div class="card-body">
+                <p class="card-text"><strong>Player nationality:   </strong>{{ player.nationality }}</p>
                 <p class="card-text"><strong>Player position:   </strong>{{ player.position }}</p>
                 <p class="card-text"><strong>Injury status:   </strong>{{ player.injury }}</p>
                 <p class="card-text"><strong>Player age:   </strong>{{ player.age }}</p>

@@ -16,6 +16,9 @@
         <b-collapse id="navbarNav" is-nav>
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'Gallery' }">Gallery</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'Home' }">Blog</router-link>
             </li>
             <li class="nav-item">
@@ -36,7 +39,7 @@
             <li class="nav-item" v-show="canCreate">
               <router-link class="nav-link" :to="{ name: 'Create' }">Create Note</router-link>
             </li>
-            <li class="nav-item" v-show="canCreatePlayer">
+            <li class="nav-item" v-show="canCreate">
               <router-link class="nav-link" :to="{ name: 'CreatePlayer' }"
                 >Create Player</router-link
               >
@@ -67,9 +70,7 @@ export default {
     let currentRouteBeforeLogout = null
 
     const canCreate = computed(() => user.value && userEmail.value === 'mariogolemovic12@gmail.com')
-    const canCreatePlayer = computed(
-      () => user.value && userEmail.value === 'mariogolemovic12@gmail.com'
-    )
+
     const signin = async () => {
       await userStore.signin()
     }
@@ -92,24 +93,24 @@ export default {
       }
     }
 
-    return { user, canCreate, canCreatePlayer, signin, confirmLogout }
+    return { user, canCreate, signin, confirmLogout }
   }
 }
 </script>
 <style scoped>
 .brand-logo {
-  max-width: 100%; 
+  max-width: 100%;
   margin-right: 10px;
-  max-width: 90px; 
+  max-width: 90px;
 }
 .title-container {
-  flex-grow: 1; 
-  text-align: center; 
+  flex-grow: 1;
+  text-align: center;
 }
 
 .title {
   color: #fff;
-  font-size: 60px; 
+  font-size: 60px;
   margin-bottom: 0;
 }
 </style>

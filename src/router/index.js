@@ -11,6 +11,8 @@ import CreatePlayer from '../views/CreatePlayerView.vue'
 import UpdatePlayer from '../views/UpdatePlayerView.vue'
 import DetailsPlayer from '../views/DetailsPlayerView.vue'
 import Players from '../views/PlayersView.vue'
+import Gallery from '../views/GalleryView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +22,12 @@ const router = createRouter({
       name: 'Home',
       component: Home
     },
+    {
+      path: '/gallery',
+      name: 'Gallery',
+      component: Gallery
+    },
+ 
     {
       path: '/players',
       name: 'Players',

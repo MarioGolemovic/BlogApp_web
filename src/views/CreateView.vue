@@ -54,7 +54,7 @@ const addnote = handleAddNote(router, title, description, user)
 .register-photo .image-holder {
   display: table-cell;
   width: auto;
-  background: url(../components/assets/PXL_141017_18367757-e1675808829780.jpg);
+  background: url(../components/assets/note1.jpeg);
   background-size: cover;
 }
 

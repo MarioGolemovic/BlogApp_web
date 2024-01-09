@@ -136,54 +136,58 @@
   
   <style scoped>
   .register-photo {
-    padding: 15px;
-  }
+  padding: 15px;
   
-  .register-photo .image-holder {
-    display: table-cell;
-    width: auto;
-    background: url(../components/assets/PXL_141017_18367757-e1675808829780.jpg);
-    background-size: cover;
-  }
+}
+
+.register-photo .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url(../components/assets/boban.jpg);
+  background-size: cover;
+}
+
+.register-photo .form-container {
+  display: table;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   
-  .register-photo .form-container {
-    display: table;
-    max-width: 900px;
-    width: 90%;
-    margin: 0 auto;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+.register-photo form {
+  display: table-cell;
+  width: 400px;
+  background-color: lightgray;
+  padding: 38px 30px; /* Smanjen padding sa 40px na 20px */
+  color: #505e6c;
+  margin-top: 0; /* Uklonjen gornji margin */
+  margin-bottom: 10px; /* Smanjen donji margin sa 30px na 10px */
+}
+
+@media (max-width: 991px) {
   .register-photo form {
-    display: table-cell;
-    width: 400px;
-    background-color: lightgray;
-    padding: 40px 30px;
-    color: #505e6c;
+    padding: 20px;
   }
-  
-  @media (max-width: 991px) {
-    .register-photo form {
-      padding: 20px;
-    }
-  }
-  
-  .register-photo form h2 {
-    font-size: 50px;
-    line-height: 1;
-    margin-bottom: 30px;
-  }
-  
-  .register-photo form h1 {
-    font-size: 40px;
-    line-height: 1;
-    margin-bottom: 30px;
-    color: rgb(11, 11, 71);
-  }
-  
-  .one {
-    text-decoration: none;
-    color: black;
-  }
+}
+
+.register-photo form h2 {
+  font-size: 40px; /* Smanjen font-size sa 50px na 40px */
+  line-height: 1;
+  margin-bottom: 20px; /* Smanjen razmak sa 30px na 20px */
+}
+
+.register-photo form h1 {
+  font-size: 32px; /* Smanjen font-size sa 40px na 32px */
+  line-height: 1;
+  margin-bottom: 20px; /* Smanjen razmak sa 30px na 20px */
+  color: rgb(11, 11, 71);
+}
+
+.one {
+  text-decoration: none;
+  color: black;
+}
   </style>
   

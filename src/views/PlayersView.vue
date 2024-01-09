@@ -42,7 +42,7 @@
   <style >
   
   body {
-    background-color: #484f57;
+    background-color: #50585f;
   }
   
   

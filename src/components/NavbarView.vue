@@ -16,6 +16,9 @@
         <b-collapse id="navbarNav" is-nav>
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'Gallery2' }">Gallery2</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'Gallery' }">Gallery</router-link>
             </li>
             <li class="nav-item">

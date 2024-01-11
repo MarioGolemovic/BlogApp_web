@@ -12,6 +12,7 @@ import UpdatePlayer from '../views/UpdatePlayerView.vue'
 import DetailsPlayer from '../views/DetailsPlayerView.vue'
 import Players from '../views/PlayersView.vue'
 import Gallery from '../views/GalleryView.vue'
+import Gallery2 from '../views/GalleryView2.vue'
 
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/gallery2',
+      name: 'Gallery2',
+      component: Gallery2
     },
     {
       path: '/gallery',

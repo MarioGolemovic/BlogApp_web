@@ -23,6 +23,9 @@
               <router-link class="nav-link" :to="{ name: 'Home' }">Blog</router-link>
             </li>
             <li class="nav-item">
+              <router-link class="nav-link" :to="{ name: 'HomePost' }">News</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'AboutClub' }">About Club</router-link>
             </li>
             <li class="nav-item">
@@ -43,6 +46,11 @@
             <li class="nav-item" v-show="canCreate">
               <router-link class="nav-link" :to="{ name: 'CreatePlayer' }"
                 >Create Player</router-link
+              >
+            </li>
+            <li class="nav-item" v-show="canCreate">
+              <router-link class="nav-link" :to="{ name: 'CreatePost' }"
+                >Create Post</router-link
               >
             </li>
 

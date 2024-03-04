@@ -12,6 +12,10 @@ import UpdatePlayer from '../views/UpdatePlayerView.vue'
 import DetailsPlayer from '../views/DetailsPlayerView.vue'
 import Players from '../views/PlayersView.vue'
 import Gallery from '../views/GalleryView.vue'
+import HomePost from '../views/HomePostView.vue'
+import DetailsPost from '../views/DetailsPostView.vue'
+import CreatePost from '../views/CreatePostView.vue'
+import UpdatePost from '../views/UpdatePostView.vue'
 
 
 
@@ -22,6 +26,11 @@ const router = createRouter({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/homepost',
+      name: 'HomePost',
+      component: HomePost
     },
    
     {
@@ -68,14 +77,30 @@ const router = createRouter({
       props: true
     },
     {
+      path: '/posts/:id',
+      name: 'DetailsPost',
+      component: DetailsPost,
+      props: true
+    },
+    {
       path: '/create',
       name: 'Create',
       component: Create
     },
     {
+      path: '/createpost',
+      name: 'CreatePost',
+      component: CreatePost
+    },
+    {
       path: '/update/:id',
       name: 'Update',
       component: Update
+    },
+    {
+      path: '/updatepost/:id',
+      name: 'UpdatePost',
+      component: UpdatePost
     },
     {
       path: '/signup',

@@ -8,15 +8,15 @@
                 <h1>{{ player.name }}</h1>
               </div>
               <div class="card-body">
-                <p class="card-text"><strong>Player nationality:   </strong>{{ player.nationality }}</p>
-                <p class="card-text"><strong>Player position:   </strong>{{ player.position }}</p>
-                <p class="card-text"><strong>Injury status:   </strong>{{ player.injury }}</p>
-                <p class="card-text"><strong>Player age:   </strong>{{ player.age }}</p>
-                <p class="card-text"><strong>Player number:   </strong>{{ player.number }}</p>
-                <p class="card-text"><strong>Yellow cards:   </strong>{{ player.yellow }}</p>
-                <p class="card-text"><strong>Red cards:   </strong>{{ player.red }}</p>
-                <p class="card-text"><strong>Player goals:   </strong>{{ player.goals }}</p>
-                <p class="card-text"><strong>Player assists:   </strong>{{ player.assists }}</p>
+                <p class="card-text"><strong>NACIONALNOST IGRAČA:   </strong>{{ player.nationality }}</p>
+                <p class="card-text"><strong>IGRAČEVA POZICIJA:   </strong>{{ player.position }}</p>
+                <p class="card-text"><strong>STANJE S OZLJEDAMA:   </strong>{{ player.injury }}</p>
+                <p class="card-text"><strong>IGRAČEVE GODINE:   </strong>{{ player.age }}</p>
+                <p class="card-text"><strong>BROJ NA DRESU:   </strong>{{ player.number }}</p>
+                <p class="card-text"><strong>ŽUTI KARTONI:   </strong>{{ player.yellow }}</p>
+                <p class="card-text"><strong>CRVENI KARTONI:   </strong>{{ player.red }}</p>
+                <p class="card-text"><strong>BROJ GOLOVA:   </strong>{{ player.goals }}</p>
+                <p class="card-text"><strong>BROJ ASISTENCIJA:   </strong>{{ player.assists }}</p>
               </div>
               <div class="card-footer">
                 <div class="btn-group" role="group" v-if="canEditPlayer()">

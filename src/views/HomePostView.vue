@@ -4,7 +4,7 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-header">
-              <h3 class="text-center">ZAJEDNO ZA DINAMO!</h3>
+              <h1 class="text-center">Hala Madrid...y nada más</h1>
             </div>
             <div class="card-body">
               <div v-if="posts.length">

@@ -3,14 +3,14 @@
     <div class="form-container border border-dark">
       <div class="image-holder"></div>
       <form method="post" @submit.prevent="signinuser">
-        <h2 class="text-center"><strong>Sign</strong> In!</h2>
-        <h1 class="text-center"><strong>Blue</strong> troops!</h1>
+        <h2 class="text-center"><strong>Prijavite</strong> se!</h2>
+        <h1 class="text-center"><strong>Los</strong> Merengues!</h1>
         <div class="form-group">
           <input
             class="form-control mb-3"
             type="email"
             v-model="email"
-            placeholder="Email"
+            placeholder="EMAIL"
             required
           />
         </div>
@@ -19,14 +19,14 @@
             class="form-control mb-3"
             type="password"
             v-model="password"
-            placeholder="Password"
+            placeholder="LOZINKA"
             required
           />
         </div>
         <div class="form-group">
-          <button class="btn btn-secondary btn-block" type="submit">Sign In</button>
+          <button class="btn btn-secondary btn-block" type="submit">POTVRDI</button>
         </div>
-        <div class="form-group mt-3"><a class="one" href="./signup">Go to register</a></div>
+        <div class="form-group mt-3"><a class="one" href="./signup">Registriraj se!</a></div>
       </form>
     </div>
   </div>
@@ -51,7 +51,7 @@ const signinuser = handleSignInUser(router, email, password)
 .register-photo .image-holder {
   display: table-cell;
   width: auto;
-  background: url(../components/assets/PXL_141017_18367757-e1675808829780.jpg);
+  background: url(../components/assets/prijava.jpg);
   background-size: cover;
 }
 
@@ -88,11 +88,14 @@ const signinuser = handleSignInUser(router, email, password)
   font-size: 40px;
   line-height: 1;
   margin-bottom: 30px;
-  color: rgb(11, 11, 71);
+  color: rgb(12, 11, 0);
 }
 
 .one {
   text-decoration: none;
   color: black;
+}
+.form-container {
+  border: 4px solid black !important; /* Promijenite debljinu granice na 4px */
 }
 </style>

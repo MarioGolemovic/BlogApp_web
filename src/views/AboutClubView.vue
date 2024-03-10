@@ -1,223 +1,155 @@
 <template>
   <div class="container">
-   
-    <div class="jumbotron history-jumbotron">
-      <h6 class="display-5 text-center"><strong>History</strong></h6>
+    <div class="jumbotron trophies-jumbotron">
+      <h6 class="display-5 text-center"><strong>Povijest</strong></h6>
 
-      Dinamo Zagreb, initially founded in 1911, has a rich and intricate history in Croatian
-      football. The club underwent several name changes, reflecting the complex historical and
-      political context of the region. In 1945, it officially became Dinamo Zagreb. The club's
-      founding fathers include a group of enthusiasts, with significant contributions from
-      individuals such as Dragutin Broz, Ante Juric, and others. Dinamo Zagreb has been a dominant
-      force in Croatian football, achieving numerous domestic league titles and cup victories.
-      Throughout its history, Dinamo Zagreb has been a symbol of Croatian football pride, producing
-      legendary players and contributing significantly to the growth of football talent in the
-      country. The club's fan base, particularly the passionate Bad Blue Boys, has played a crucial
-      role in creating an intense and supportive atmosphere during matches.
-      
+      Real Madrid, osnovan 1902. godine, prošlosti je koja odiše slavom i veličanstvenošću. Njegov
+      put do slave nije samo putovanje jednog kluba, već epska priča koja definira standarde
+      izvrsnosti i dominacije. Kroz generacije, Real Madrid nije samo osvajao naslove, već je
+      stvarao legende, postajući simbol nogometne strasti i savršenstva. Njegova globalna prisutnost
+      i neporeciva slava čine ga ne samo najvećim klubom na svijetu, već i svjetlom koje obasjava
+      put budućim generacijama nogometaša i obožavatelja diljem planete.
+
       <div class="image-section text-center d-flex justify-content-center">
-       
         <img
-          src="../components/assets/grb1.webp"
+          src="../components/assets/history1.jpeg"
           alt="History Image 1"
           class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
-          src="../components/assets/grb2.webp"
+          src="../components/assets/history2.jpeg"
           alt="History Image 2"
           class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
-          src="../components/assets/grb3.webp"
+          src="../components/assets/history3.webp"
           alt="History Image 3"
           class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
-        />
-      </div>
-      <div class="image-section text-center d-flex justify-content-center">
-     
-
-        <img
-          src="../components/assets/grb4.webp"
-          alt="History Image 4"
-          class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
-        />
-        <img
-          src="../components/assets/grb5.webp"
-          alt="History Image 5"
-          class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
-        />
-        <img
-          src="../components/assets/grb6.webp"
-          alt="History Image 6"
-          class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
-        />
-      </div>
-      <div class="image-section text-center d-flex justify-content-center">
-       
-
-        <img
-          src="../components/assets/grb7.webp"
-          alt="History Image 7"
-          class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
-        />
-        <img
-          src="../components/assets/grb8.webp"
-          alt="History Image 8"
-          class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
-        />
-        <img
-          src="../components/assets/grb9.webp"
-          alt="History Image 9"
-          class="img-fluid img-thumbnail"
-          style="max-width: 30%; max-height: 30%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
       </div>
     </div>
 
-  
     <div class="jumbotron trophies-jumbotron">
-      <h6 class="display-5 text-center"><strong>Trophies</strong></h6>
+      <h6 class="display-5 text-center"><strong>Trofeji</strong></h6>
 
-      Dinamo Zagreb, a pillar of Croatian football, has forged a storied history marked by triumphs
-      both at home and on the continental stage. The club's saga unfolds through a dominance of over
-      20 HNL titles, showcasing an unparalleled influence in the domestic league. In knockout
-      competitions, particularly the Croatian Football Cup, Dinamo Zagreb's tactical brilliance has
-      translated into more than 15 cup triumphs. This resilience paints a vivid picture of a club
-      capable of navigating challenges on their path to glory. A pinnacle achievement arrived in the
-      form of the Inter-Cities Fairs Cup in 1966-67, marking Dinamo Zagreb's foray onto the European
-      stage. This victory underscored their ability to compete and succeed beyond national borders.
-      European club competitions, including the UEFA Champions League and Europa League, have seen
-      Dinamo Zagreb leave an indelible mark. Participation in these tournaments symbolizes the
-      club's ambition to stand shoulder to shoulder with Europe's footballing elite. Beyond
-      silverware, Dinamo Zagreb's legacy is woven into the fabric of Croatian football. The club's
-      commitment to local talent, attractive play, and a profound connection with fans transcends
-      traditional football narratives.
+      Trofeji Real Madrida nisu samo zbirka medalja; oni su simbol klupske izvrsnosti i
+      neprikosnovene dominacije. Od prvih osvajanja do današnjih dana, svaki pehar predstavlja
+      neumorni rad, strast i posvećenost prema igri. Sa čak 14 osvojenih titula Lige prvaka, 36
+      trofeja La Lige i 20 naslova u Kupu kralja, Real Madrid se ponosi impresivnom kolekcijom koja
+      nadmašuje sva očekivanja. Ovi trofeji nisu samo brojevi; oni su svjedočanstvo klupske
+      veličine, naslijeđa nepobjedivosti i ambicije za postizanjem vrhunca. Real Madrid nije samo
+      klub s najviše trofeja; on je sinonim za neprekidnu potragu za savršenošću i inspiracija za
+      sve generacije koje sanjaju o osvajanju vrhova nogometnog svijeta.
 
-     
       <div class="image-section text-center d-flex justify-content-center">
-       
         <img
-          src="../components/assets/trofej1.jpg"
+          src="../components/assets/trophies1.jpg"
           alt="Trophies Image 1"
           class="img-fluid img-thumbnail"
-          style="max-width: 24.5%; height: 40%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
-          src="../components/assets/trofej2.jpg"
+          src="../components/assets/trophies2.webp"
           alt="Trophies Image 2"
           class="img-fluid img-thumbnail"
           style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
-          src="../components/assets/trofej3.jpg"
+          src="../components/assets/trophies3.jpg"
           alt="Trophies Image 3"
           class="img-fluid img-thumbnail"
-          style="max-width: 20%; height: 50%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
       </div>
     </div>
 
-   
-    <div class="jumbotron bbb-jumbotron">
-      <h6 class="display-5 text-center"><strong>Bad Blue Boys</strong></h6>
+    <div class="jumbotron madridistas-jumbotron">
+      <h6 class="display-5 text-center"><strong>Madridistas & Los Blancos</strong></h6>
 
-      Founded in 1986 during Dinamo Zagreb's Yugoslavian era, the Bad Blue Boys stand as the
-      heartbeat of the club. Known for unwavering loyalty and vibrant support, this group quickly
-      became integral to Dinamo's identity. Named after Dinamo's blue jerseys, the Bad Blue Boys
-      create an electric atmosphere at matches. Their vocal chants and choreographed displays make
-      them a driving force behind the team's performances at Maksimir Stadium. Beyond the pitch, the
-      Bad Blue Boys engage in community initiatives, embodying a sense of responsibility and
-      camaraderie. Despite occasional controversies, their commitment to Dinamo Zagreb remains
-      unwavering. As the club progresses, the Bad Blue Boys continue to symbolize loyalty and
-      passion. They are more than supporters; they are the living embodiment of the passion that
-      fuels the legacy of Dinamo Zagreb.
+      Navijači Real Madrida nisu samo gledatelji na tribinama; oni su srce i duša kluba, neizostavni
+      dio njegove slavne povijesti i nasljeđa. Njihova vjernost i strast prema klubu ne poznaju
+      granice, od stadiona Santiago Bernabeu do svih krajeva svijeta. Poznati kao Madridisti, ovi
+      strastveni navijači su uvijek uz svoj klub, neumorno bodreći svoje junake u svim izazovima.
+      Njihova podrška nije samo buka s tribina; ona je energija koja pokreće igrače do vrhunskih
+      izvedbi i koja stvara nezaboravne trenutke na terenu. Kroz dobre i loše trenutke, Madridisti
+      su uvijek tu, vjerni i ponosni na svoje boje. Njihova ljubav prema Real Madridu nije samo
+      strast, već vjera - vjera u klupsku slavu, vjera u nepobjedivost i vjera u beskonačne
+      mogućnosti koje nosi svaki novi izazov.
 
-     
       <div class="image-section text-center d-flex justify-content-center">
-        
         <img
-          src="../components/assets/bbb1.webp"
-          alt="BBB Image 1"
+          src="../components/assets/madridistas1.jpg"
+          alt="Madridistas Image 1"
           class="img-fluid img-thumbnail"
-          style="max-width: 29.5%; height: 40%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
-          src="../components/assets/bbb2.webp"
-          alt="BBB Image 2"
+          src="../components/assets/madridistas2.jpg"
+          alt="Madridistas Image 2"
           class="img-fluid img-thumbnail"
-          style="max-width: 37.5%; height: 55%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
-          src="../components/assets/bbb3.jpg"
-          alt="BBB Image 3"
+          src="../components/assets/madridistas3.jpg"
+          alt="Madridistas Image 3"
           class="img-fluid img-thumbnail"
-          style="max-width: 29.5%; height: 50%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
       </div>
     </div>
 
-   
-    <div class="jumbotron maksimir-jumbotron">
-      <h6 class="display-5 text-center"><strong>Maksimir</strong></h6>
+    <div class="jumbotron santiago-jumbotron">
+      <h6 class="display-5 text-center"><strong>Santiago Bernabeu</strong></h6>
 
-      Built in 1912, Maksimir Stadium stands as the iconic home ground of Dinamo Zagreb. Nestled in
-      Zagreb, Croatia, it not only holds the distinction of being the country's oldest stadium but
-      also ranks among the most historic football venues in Southeast Europe. Maksimir Stadium has
-      witnessed countless historic moments in Croatian football, serving as the primary venue for
-      Dinamo Zagreb's home matches. Over the years, it has undergone several renovations and
-      expansions, evolving to meet modern standards while preserving its rich legacy. The stadium's
-      capacity, fluctuating over time, currently accommodates around 35,000 spectators. Beyond being
-      a mere playing field, Maksimir is a revered space where the echoes of cheers, victories, and
-      the passion of fans reverberate through its historic corridors. As Dinamo Zagreb's fortress,
-      Maksimir Stadium is not just a physical structure but a symbol of the club's enduring legacy.
-      It encapsulates the spirit of football, where dreams are born, victories celebrated, and the
-      collective heartbeat of fans pulses through the very foundation of this footballing citadel.
-
+      Stadion Santiago Bernabéu nije samo mjesto gdje se igra nogomet; on je hram nogometne strasti
+      i simbol klupske veličine. Smješten u srcu Madrida, ovaj sveti teren je domaćin nezaboravnim
+      utakmicama, legendarnim trenucima i najuzbudljivijim događajima u povijesti Real Madrida. Sa
+      kapacitetom od preko 80.000 mjesta, Santiago Bernabéu je epicentar navijačke euforije i
+      elektriciteta koji se osjeća u zraku tijekom svake utakmice. Ovaj stadion nije samo
+      arhitektonsko čudo; on je svjedok nevjerojatnih uspjeha, od prvih pobjeda do najnovijih
+      trofeja. Šetnja ovim svetim terenom ne samo da evocira uspomene na legendarne igrače i
+      trenutke, već istovremeno inspirira sadašnje i buduće generacije da sanjaju velike snove i
+      dosegnu nove visine u svijetu nogometa. Santiago Bernabéu nije samo stadion; on je simbol
+      snova, strasti i beskrajnih mogućnosti koji oživljava duh Real Madrida i njegove vjernih
+      navijačke vojske, Madridista.
 
       <div class="image-section text-center d-flex justify-content-center">
-        
         <img
           src="../components/assets/stadion1.jpg"
           alt="Stadion Image 1"
           class="img-fluid img-thumbnail"
-          style="max-width: 31.5%; height: 40%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
           src="../components/assets/stadion2.jpg"
           alt="Stadion Image 2"
           class="img-fluid img-thumbnail"
-          style="max-width: 32.5%; height: 55%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
         <img
           src="../components/assets/stadion3.jpg"
           alt="Stadion Image 3"
           class="img-fluid img-thumbnail"
-          style="max-width: 29.5%; height: 50%; margin-right: 10px"
+          style="max-width: 30%; height: 50%; margin-right: 10px"
         />
       </div>
     </div>
-    <div class="follow-dinamo-section text-center">
-      <h6 class="display-5"><strong>Follow Dinamo</strong></h6>
+    <div class="follow-real-section text-center">
+      <h6 class="display-5"><strong>Zapratimo Real Madrid!</strong></h6>
       <div class="social-icons">
-     
-        <a href="https://www.facebook.com/dinamo?locale=hr_HR" target="_blank">
-          <img src="../components/assets/face.png" alt="Facebook Icon" class="social-icon" />
+        <a href="https://www.facebook.com/RealMadrid/?locale=hr_HR" target="_blank">
+          <img src="../components/assets/fb.png" alt="Facebook Icon" class="social-icon" />
         </a>
-        
-        <a href="https://www.instagram.com/gnkdinamo/" target="_blank">
-          <img src="../components/assets/insta.png" alt="Instagram Icon" class="social-icon" />
+
+        <a href="https://www.instagram.com/realmadrid/?hl=hr" target="_blank">
+          <img src="../components/assets/insta.webp" alt="Instagram Icon" class="social-icon" />
         </a>
-        <a href="https://gnkdinamo.hr/" target="_blank">
+        <a href="https://www.realmadrid.com/en-US" target="_blank">
           <img
-            src="../components/assets/Dinamo_Zagreb_logo.png"
+            src="../components/assets/RMA_GRB.png"
             alt="page Icon"
             class="social-icon"
           />
@@ -229,32 +161,23 @@
 <script></script>
 
 <style scoped>
+
 strong {
   color: black;
+  
 }
 
-.history-jumbotron {
-  background-color: #9daab8; 
-  padding: 20px;
-  margin-top: 20px;
-}
+.jumbotron {
+    background-color: #d8d7d2;
+    padding: 20px;
+    margin-top: 20px;
+    border: 4px solid black; /* Dodajte ovo CSS pravilo za granicu */
+  }
 
-.trophies-jumbotron {
-  background-color: #9daab8; 
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.bbb-jumbotron {
-  background-color: #9daab8; 
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.maksimir-jumbotron {
-  background-color: #9daab8; 
-  padding: 20px;
-  margin-top: 20px;
+  .img-thumbnail {
+    border-color: black; /* Promijenite boju granice na crnu */
+    border-radius: 4px;
+    padding: 5px;
 }
 
 .image-section img {
@@ -263,7 +186,7 @@ strong {
   margin-top: 10px;
 }
 
-.follow-dinamo-section {
+.follow-real-section {
   margin-top: 20px;
 }
 
@@ -272,7 +195,7 @@ strong {
 }
 
 .social-icon {
-  width: 5%; 
+  width: 5%;
   height: 5%;
   margin-right: 40px;
   margin-bottom: 30px;

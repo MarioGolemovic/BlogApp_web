@@ -12,15 +12,15 @@
             </div>
             <div class="card-footer">
               <div class="btn-group" role="group" v-if="canEdit()">
-                <button class="btn btn-danger" @click="confirmDeleteNote">DELETE</button>
+                <button class="btn btn-danger" @click="confirmDeleteNote">OBRIŠI</button>
                 <router-link class="btn btn-secondary" :to="'/update/:id' + note.id"
-                  >UPDATE</router-link
+                  >AŽURIRAJ</router-link
                 >
               </div>
             </div>
           </div>
           <div class="mb-3">
-            <h2>Comments:</h2>
+            <h2>Komentari:</h2>
             <ul class="list-group">
               <li v-for="comment in comments" :key="comment.id" class="list-group-item">
                 <p class="mb-0">
@@ -34,17 +34,17 @@
                   class="btn btn-danger"
                   @click="confirmDeleteComment(comment.id)"
                 >
-                  DELETE
+                  OBRIŠI
                 </button>
               </li>
             </ul>
           </div>
           <form @submit.prevent="submitComment">
             <div class="form-group">
-              <label for="comment">Add a comment:</label>
+              <label for="comment"><h5>Dodaj komentar:</h5></label>
               <input type="text" class="form-control" id="comment" v-model="commentText" />
             </div>
-            <button type="submit" class="btn btn-secondary mt-3 mb-3">Submit</button>
+            <button type="submit" class="btn btn-secondary mt-3 mb-3">POTVRDI</button>
           </form>
         </div>
       </div>
@@ -143,5 +143,12 @@ label {
 
 h1 {
   color: azure;
+}
+
+h2 {
+  color: black;
+}
+h5 {
+  color: black;
 }
 </style>

@@ -4,7 +4,7 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-header">
-              <h3 class="text-center">DINAMO ZAGREB SQUAD!</h3>
+              <h1 class="text-center">Galácticos</h1>
             </div>
             <div class="card-body">
               <div v-if="players.length">
@@ -42,7 +42,7 @@
   <style >
   
   body {
-    background-color: #50585f;
+    background-color: #dfb93c;
   }
   
   

@@ -3,13 +3,13 @@
     <div class="form-container border border-dark">
       <div class="image-holder"></div>
       <form method="post" @submit.prevent="signupuser">
-        <h2 class="text-center"><strong>Create</strong> an account.</h2>
+        <h2 class="text-center"><strong>Kreiraj</strong> profil!</h2>
         <div class="form-group">
           <input
             class="form-control mb-3"
             type="text"
             v-model="username"
-            placeholder="Username"
+            placeholder="KORISNIČKO IME"
             required
           />
         </div>
@@ -18,7 +18,7 @@
             class="form-control mb-3"
             type="email"
             v-model="email"
-            placeholder="Email"
+            placeholder="EMAIL"
             required
           />
         </div>
@@ -27,12 +27,12 @@
             class="form-control mb-3"
             type="password"
             v-model="password"
-            placeholder="Password"
+            placeholder="LOZINKA"
             required
           />
         </div>
         <div class="form-group">
-          <button class="btn btn-secondary btn-block" type="submit">Sign Up</button>
+          <button class="btn btn-secondary btn-block" type="submit">POTVRDI</button>
         </div>
       </form>
     </div>
@@ -58,7 +58,7 @@ const signupuser = handleSignUpUser(router, username, email, password)
 .register-photo .image-holder {
   display: table-cell;
   width: auto;
-  background: url(../components/assets/register.jpg);
+  background: url(../components/assets/registracija.jpg);
   background-size: cover;
 }
 .register-photo .form-container {
@@ -85,5 +85,8 @@ const signupuser = handleSignUpUser(router, username, email, password)
   line-height: 1;
   margin-bottom: 30px;
   color: black;
+}
+.form-container {
+  border: 4px solid black !important; /* Promijenite debljinu granice na 4px */
 }
 </style>

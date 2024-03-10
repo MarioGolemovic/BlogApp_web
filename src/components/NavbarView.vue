@@ -4,11 +4,12 @@
       <div class="container">
         <div class="d-flex align-items-center">
           <router-link class="navbar-brand" :to="{ name: 'Home' }">
-            <img src="./assets/bbb.png" alt="Brand Logo" class="brand-logo" />
+            <img src="./assets/RMA_GRB.png" alt="Brand Logo" class="brand-logo" />
           </router-link>
         </div>
         <div class="title-container">
-          <h1 class="text-white title">Bad Blue Boys</h1>
+          <h1 class="text-white title">Madridistas</h1>
+          
         </div>
 
         <b-nav-toggle target="navbarNav"></b-nav-toggle>
@@ -17,45 +18,45 @@
           <ul class="navbar-nav mx-auto">
             
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'Gallery' }">Gallery</router-link>
+              <router-link class="nav-link" :to="{ name: 'Gallery' }">Galerija</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'Home' }">Blog</router-link>
+              <router-link class="nav-link" :to="{ name: 'Home' }">Novosti</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'HomePost' }">News</router-link>
+              <router-link class="nav-link" :to="{ name: 'HomePost' }">Utakmice</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'AboutClub' }">About Club</router-link>
+              <router-link class="nav-link" :to="{ name: 'AboutClub' }">O klubu</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'Contact' }">Contact</router-link>
+              <router-link class="nav-link" :to="{ name: 'Contact' }">Kontakt</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{ name: 'Players' }">Players</router-link>
+              <router-link class="nav-link" :to="{ name: 'Players' }">Igrači</router-link>
             </li>
             <li class="nav-item" v-show="!user">
-              <router-link class="nav-link" :to="{ name: 'SignIn' }">Sign In</router-link>
+              <router-link class="nav-link" :to="{ name: 'SignIn' }">Prijava</router-link>
             </li>
             <li class="nav-item" v-show="!user">
-              <router-link class="nav-link" :to="{ name: 'SignUp' }">Sign Up</router-link>
+              <router-link class="nav-link" :to="{ name: 'SignUp' }">Registracija</router-link>
             </li>
             <li class="nav-item" v-show="canCreate">
-              <router-link class="nav-link" :to="{ name: 'Create' }">Create Note</router-link>
+              <router-link class="nav-link" :to="{ name: 'Create' }">Dodaj novost</router-link>
             </li>
             <li class="nav-item" v-show="canCreate">
               <router-link class="nav-link" :to="{ name: 'CreatePlayer' }"
-                >Create Player</router-link
+                >Dodaj igrača</router-link
               >
             </li>
             <li class="nav-item" v-show="canCreate">
               <router-link class="nav-link" :to="{ name: 'CreatePost' }"
-                >Create Post</router-link
+                >Dodaj utakmicu</router-link
               >
             </li>
 
             <li class="nav-item" v-show="user">
-              <a class="nav-link" @click="confirmLogout">Logout</a>
+              <a class="nav-link" @click="confirmLogout">Odjava</a>
             </li>
           </ul>
         </b-collapse>
@@ -121,5 +122,10 @@ export default {
   color: #fff;
   font-size: 60px;
   margin-bottom: 0;
+}
+.nav-link:hover {
+  font-size: 15px; /* Povećajte veličinu teksta prilikom prelaska mišem */
+  color: rgb(219, 189, 16) !important;
+  font-weight: bold; /* Promenite boju teksta u žutu prilikom prelaska mišem */
 }
 </style>

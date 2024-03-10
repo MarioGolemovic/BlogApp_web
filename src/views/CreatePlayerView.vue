@@ -3,13 +3,13 @@
       <div class="form-container border border-dark mt-0">
         <div class="image-holder"></div>
         <form method="post" @submit.prevent="addplayer">
-          <h1 class="text-center" style="margin-bottom: 10px;"><strong>Create </strong>a player!</h1>
+          <h1 class="text-center" style="margin-bottom: 10px;"><strong>Kreiraj </strong>igrača!</h1>
           <div class="form-group">
             <input
               class="form-control mb-2"
               type="text"
               v-model="name"
-              placeholder="Name"
+              placeholder="IME"
               required
               autofocus
             />
@@ -19,7 +19,7 @@
               class="form-control mb-2"
               type="text"
               v-model="nationality"
-              placeholder="Nationality"
+              placeholder="NACIONALNOST"
               required
               autofocus
             />
@@ -29,7 +29,7 @@
               class="form-control mb-2"
               type="text"
               v-model="position"
-              placeholder="Position"
+              placeholder="POZICIJA"
               required
               autofocus
             />
@@ -39,7 +39,7 @@
               class="form-control mb-2"
               type="text"
               v-model="injury"
-              placeholder="Injury"
+              placeholder="OZLJEDA"
               required
               autofocus
             />
@@ -49,7 +49,7 @@
               class="form-control mb-2"
               type="text"
               v-model="age"
-              placeholder="Age"
+              placeholder="GODINE"
               required
               autofocus
             />
@@ -59,7 +59,7 @@
               class="form-control mb-2"
               type="text"
               v-model="number"
-              placeholder="Number"
+              placeholder="BROJ"
               required
               autofocus
             />
@@ -69,7 +69,7 @@
               class="form-control mb-2"
               type="text"
               v-model="yellow"
-              placeholder="Yellow"
+              placeholder="ŽUTI KARTONI"
               required
               autofocus
             />
@@ -79,7 +79,7 @@
               class="form-control mb-2"
               type="text"
               v-model="red"
-              placeholder="Red"
+              placeholder="CRVENI KARTONI"
               required
               autofocus
             />
@@ -89,7 +89,7 @@
               class="form-control mb-2"
               type="text"
               v-model="goals"
-              placeholder="Goals"
+              placeholder="GOLOVI"
               required
               autofocus
             />
@@ -99,13 +99,13 @@
               class="form-control mb-2"
               type="text"
               v-model="assists"
-              placeholder="Assists"
+              placeholder="ASISTENCIJE"
               required
               autofocus
             />
           </div>
           <div class="form-group">
-            <button class="btn btn-secondary btn-block" type="submit">Add player</button>
+            <button class="btn btn-secondary btn-block" type="submit">Dodaj igrača!</button>
           </div>
         </form>
       </div>
@@ -136,14 +136,14 @@
   
   <style scoped>
   .register-photo {
-  padding: 15px;
+  padding: 1px;
   
 }
 
 .register-photo .image-holder {
   display: table-cell;
   width: auto;
-  background: url(../components/assets/boban.jpg);
+  background: url(../components/assets/vini.jpg);
   background-size: cover;
 }
 
@@ -154,6 +154,9 @@
   margin: 0 auto;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   
+}
+.form-container {
+  border: 4px solid black !important; /* Promijenite debljinu granice na 4px */
 }
 
 .register-photo form {
@@ -182,7 +185,7 @@
   font-size: 32px; /* Smanjen font-size sa 40px na 32px */
   line-height: 1;
   margin-bottom: 20px; /* Smanjen razmak sa 30px na 20px */
-  color: rgb(11, 11, 71);
+  color: rgb(0, 5, 2);
 }
 
 .one {

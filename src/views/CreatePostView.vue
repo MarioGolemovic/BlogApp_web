@@ -3,13 +3,13 @@
       <div class="form-container border border-dark">
         <div class="image-holder"></div>
         <form method="post" @submit.prevent="addpost">
-          <h1 class="text-center"><strong>Create </strong>a post!</h1>
+          <h1 class="text-center"><strong>Kreiraj </strong>objavu!</h1>
           <div class="form-group">
             <input
               class="form-control mb-3"
               type="text"
               v-model="title"
-              placeholder="Title"
+              placeholder="NASLOV"
               required
               autofocus
             />
@@ -19,13 +19,13 @@
               class="form-control mb-3"
               type="text"
               v-model="description"
-              placeholder="Description"
+              placeholder="OPIS"
               rows="8"
               required
             ></textarea>
           </div>
           <div class="form-group">
-            <button class="btn btn-secondary btn-block" type="submit">Add post</button>
+            <button class="btn btn-secondary btn-block" type="submit">Dodaj objavu!</button>
           </div>
         </form>
       </div>
@@ -50,11 +50,14 @@
   .register-photo {
     padding: 80px 0;
   }
+  .form-container {
+  border: 4px solid black !important; /* Promijenite debljinu granice na 4px */
+}
   
   .register-photo .image-holder {
     display: table-cell;
     width: auto;
-    background: url(../components/assets/note1.jpeg);
+    background: url(../components/assets/beckham.avif);
     background-size: cover;
   }
   
@@ -90,7 +93,7 @@
     font-size: 40px;
     line-height: 1;
     margin-bottom: 30px;
-    color: rgb(11, 11, 71);
+    color: rgb(0, 0, 3);
   }
   
   .one {

@@ -26,6 +26,9 @@
         <div class="form-group">
           <button class="btn btn-secondary btn-block" type="submit">POTVRDI</button>
         </div>
+        <div>
+          <router-link to="/resetpassword" class="reset-password-link">ZABORAVILI STE LOZINKU?</router-link>
+        </div>
         <div class="form-group mt-3"><a class="one" href="./signup">Registriraj se!</a></div>
       </form>
     </div>
@@ -44,6 +47,12 @@ const signinuser = handleSignInUser(router, email, password)
 </script>
 
 <style scoped>
+.reset-password-link {
+  color: black; /* Postavlja boju teksta na crnu */
+  text-decoration: none; /* Uklanja podvlačenje */
+  cursor: pointer; /* Promena kursora na strelicu kad se miš postavi na link */
+}
+
 .register-photo {
   padding: 80px 0;
 }

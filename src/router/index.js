@@ -16,12 +16,17 @@ import HomePost from '../views/HomePostView.vue'
 import DetailsPost from '../views/DetailsPostView.vue'
 import CreatePost from '../views/CreatePostView.vue'
 import UpdatePost from '../views/UpdatePostView.vue'
-
+import ResetPassword from '../views/ResetPasswordView.vue'
 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/resetpassword',
+      name: 'ResetPassword',
+      component: ResetPassword
+    },
     {
       path: '/home',
       name: 'Home',
